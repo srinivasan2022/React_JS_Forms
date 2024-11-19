@@ -1,0 +1,30 @@
+{
+	"name": "React JS Forms",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"hostRequirements": {
+	  "cpus": 4
+	},
+	"waitFor": "onCreateCommand",
+	"updateContentCommand": "python3 -m pip install -r requirements.txt",
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
+	"customizations": {
+	  "vscode": {
+		"settings": {
+		  "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+		  "python.terminal.activateEnvInCurrentTerminal": true,
+		  "python.terminal.launchArgs": [
+			"-X",
+			"dev"
+		  ],
+		  "editor.formatOnSave": true
+		},
+		"extensions": [
+		  "ms-python.python",
+		  "ms-toolsai.jupyter",
+		  "dbaeumer.vscode-eslint",
+		  "esbenp.prettier-vscode",
+		  "ms-azuretools.vscode-docker"
+		]
+	  }
+	}
+  }
